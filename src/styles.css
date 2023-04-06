@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Brawler:wght@400;700&family=Croissant+One&display=swap");
+
+body {
+  background: rgba(190, 237, 248, 0.29);
+  font-family: "Brawler", serif;
+}
+
+.App {
+  display: grid;
+  height: 100 vh;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 2fr, 2fr, 2fr;
+  grid-template-areas:
+    "title title tile"
+    "timer control sound "
+    "timer pred play";
+}
+
+#title {
+  font-family: "Croissant One", cursive;
+  color: #149eec;
+  grid-area: title;
+  text-align: end;
+}
+.hover-button {
+  color: #ffffff;
+  padding: 8px 14px;
+  margin: 2px;
+  background: #3748dd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.1s;
+  border: none;
+  font-size: 15px;
+  font-family: "Brawler";
+  font-style: normal;
+  font-weight: 400;
+}
+.hover-button:hover {
+  background: #1dc6fb;
+}
+#control {
+  grid-area: control;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#clock {
+  background: #d9d9d9;
+  padding: 5px;
+}
+
+#pred {
+  grid-area: pred;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.radio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.radio__input {
+  display: none;
+}
+.radio__label {
+  color: #ffffff;
+  padding: 8px 14px;
+  margin: 2px;
+  background: #3748dd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.radio__input:checked + .radio__label {
+  background: #1dc6fb;
+}
+#sounds {
+  grid-area: sound;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#play {
+  grid-area: play;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#timer {
+  grid-area: timer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intervals-Group {
+  color: #ffffff;
+  padding: 5px 10px;
+  margin: 2px;
+  background: #3748dd;
+  border-radius: 10px;
+}
+.interval {
+  width: 30px;
+}
