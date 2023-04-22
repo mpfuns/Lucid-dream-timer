@@ -29,7 +29,7 @@ export default function Timer(props) {
           id={inter}
           value={`${props.slot}.${inter}`}
           className="interval"
-          onChange={() => intervalHandle(inter, event)}
+          onChange={() => intervalHandle(inter)}
         />
         <label htmlFor={inter}> Minutes</label>
       </div>
