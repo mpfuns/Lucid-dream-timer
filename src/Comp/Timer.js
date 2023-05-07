@@ -1,21 +1,21 @@
 import React from "react";
 export default function Timer(props) {
   const nums = [
-    "interval1",
-    "interval2",
-    "interval3",
-    "interval4",
-    "interval5",
-    "interval6",
-    "interval7",
-    "interval8",
-    "interval9",
-    "interval10",
-    "interval11",
-    "interval12",
-    "interval13",
-    "interval14",
-    "interval15"
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15"
   ];
 
   const sets = nums.map((inter) => {
@@ -27,17 +27,18 @@ export default function Timer(props) {
           placeholder="0"
           key={inter}
           id={inter}
-          value={`${props.slot}.${inter}`}
+          value={props.slot.inter}
           className="interval"
-          onChange={() => intervalHandle(inter)}
+          onChange={() => intervalHandle(inter,props.slot.inter )}
         />
         <label htmlFor={inter}> Minutes</label>
       </div>
     );
   });
 
-  function intervalHandle(id, event) {
-    const min = event.target.value;
+  function intervalHandle(id, num) {
+   console.log(num)
+    const min =  num
     const intervalName = `interval${id}`;
     if (min < 0) {
       return;

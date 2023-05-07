@@ -21,21 +21,21 @@ export default function App() {
   });
 
   const [slot, setSlot] = React.useState({
-    interval1: 0,
-    interval2: 0,
-    interval3: 0,
-    interval4: 0,
-    interval5: 0,
-    interval6: 0,
-    interval7: 0,
-    interval8: 0,
-    interval9: 0,
-    interval10: 0,
-    interval11: 0,
-    interval12: 0,
-    interval13: 0,
-    interval14: 0,
-    interval15: 0
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
+    6: 0,
+    7: 0,
+    8: 0,
+    9: 0,
+    10: 0,
+    11: 0,
+    12: 0,
+    13: 0,
+    14: 0,
+    15: 0
   });
 
   //for play sound  on click
