@@ -29,17 +29,18 @@ export default function Timer(props) {
           id={inter}
           value={props.slot.inter}
           className="interval"
-          onChange={() => intervalHandle(inter,props.slot.inter )}
+          onChange={(event) => intervalHandle(inter,event)}
         />
         <label htmlFor={inter}> Minutes</label>
       </div>
     );
   });
 
-  function intervalHandle(id, num) {
-   console.log(num)
-    const min =  num
+  function intervalHandle(id,event ) {
+    let answer = event.target.value
     const intervalName = `interval${id}`;
+    const min = parseFloat(answer)
+    console.log(min)
     if (min < 0) {
       return;
     }
@@ -52,4 +53,5 @@ export default function Timer(props) {
       {sets}
     </div>
   );
+  
 }
